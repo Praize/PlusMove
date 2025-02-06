@@ -24,6 +24,8 @@ class CustomerRequest extends FormRequest
         return [
             'customers_name' => 'required|string|max:255',
             'customers_email' => 'required|unique:customers',
+            'package_id' => 'required',
+
             'is_active' => 'required',
         ];  
     }

@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>{{ config('app.name', 'Plus - Move') }}</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -14,32 +14,28 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="antialiased">
-        <div class="bg-white">
-            <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
-              <div class="relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
-                <svg viewBox="0 0 1024 1024" class="absolute top-1/2 left-1/2 -z-10 size-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0" aria-hidden="true">
-                  <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fill-opacity="0.7" />
-                  <defs>
-                    <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
-                      <stop stop-color="#7775D6" />
-                      <stop offset="1" stop-color="#E935C1" />
-                    </radialGradient>
-                  </defs>
-                </svg>
-                <div class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
-                  <h2 class="text-3xl font-semibold tracking-tight text-balance text-white sm:text-4xl">Boost your productivity. Start using our app today.</h2>
-                  <p class="mt-6 text-lg/8 text-pretty text-gray-300">Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla.</p>
-                  <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
-                    <a href="#" class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-xs hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Get started</a>
-                    <a href="#" class="text-sm/6 font-semibold text-white">Learn more <span aria-hidden="true">→</span></a>
+      <section>
+        <div class="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-16 max-w-7xl lg:py-24">
+          <div class="flex w-full mx-auto text-left">
+            <div class="relative inline-flex items-center mx-auto align-middle">
+              <div class="text-center">
+                <h1 class="max-w-5xl text-2xl font-bold leading-none tracking-tighter text-neutral-600 md:text-5xl lg:text-6xl lg:max-w-7xl">
+                  PlusMove <br class="hidden lg:block">
+                  and handle users
+                </h1>
+                <p class="max-w-xl mx-auto mt-8 text-base leading-relaxed text-gray-500">Packages management.</p>
+                <div class="flex justify-center w-full max-w-2xl gap-2 mx-auto mt-6">
+                  <div class="mt-3 rounded-lg sm:mt-0">
+                    <a href="{{route('login')}}" class="px-5 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 lg:px-10 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Login</a>
                   </div>
-                </div>
-                <div class="relative mt-16 h-80 lg:mt-8">
-                  <img class="absolute top-0 left-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10" src="https://tailwindui.com/plus/img/component-images/dark-project-app-screenshot.png" alt="App screenshot" width="1824" height="1080">
+                  <div class="mt-3 rounded-lg sm:mt-0">
+                    <a href="{{route('register')}}" class="px-5 lg:px-10 py-3.5 text-base font-medium text-center text-blue-600 transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">Register</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          
+        </div>
+      </section>
     </body>
 </html>

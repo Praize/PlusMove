@@ -41,16 +41,17 @@ class CustomerController extends Controller
         customer::create([
             'customers_name' => $customerData['customers_name'],
             'customers_email' => $customerData['customers_email'],
+            'package_id' => $customerData['package_id'],
             'created_by' => auth()->user()->id,
             'is_active' => $customerData['is_active']
         ]);
-        foreach($request->package as $package){
-                  //stores packages/customer
-            customers_to_packages::create([
-                'customer_id' => $request->id,
-                'package_id' => $package
-            ]);
-        }
+        // foreach($request->package as $package){
+        //           //stores packages/customer
+        //     customers_to_packages::create([
+        //         'customer_id' => $request->id,
+        //         'package_id' => $package
+        //     ]);
+        // }
   
 
         return redirect()->route('customers.index')->with('success','Customer created successfully.');
